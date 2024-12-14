@@ -8,15 +8,23 @@
     <meta name="author" content="Eng. Kareem">
     <title>Eng. Kareem | Professional Educator</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Eng. Kareem</h1>
-        <p>Your Gateway to Academic Excellence</p>
+        <div class="header-content">
+            <h1>Eng. Kareem</h1>
+            <p>Your Gateway to Academic Excellence</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+        <video autoplay muted loop class="background-video">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </header>
 
     <nav>
-        <ul>
+        <ul class="navbar">
             <li><a href="#about">About Me</a></li>
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
@@ -25,49 +33,110 @@
     </nav>
 
     <main>
-        <section id="about">
+        <section id="about" class="about-section">
             <h2>About Me</h2>
-            <p>I am Eng. Kareem, a passionate and dedicated educator with years of experience in guiding students to reach their academic potential. My expertise lies in personalizing learning experiences to meet individual student needs, ensuring their success in competitive examinations and academic pursuits.</p>
-            <p>With a focus on both academic knowledge and critical thinking skills, I have helped students achieve remarkable scores and gain confidence in their abilities.</p>
+            <div class="about-content">
+                <img src="profile.jpg" alt="Eng. Kareem" class="profile-image">
+                <p>I am Eng. Kareem, a passionate and dedicated educator with years of experience in guiding students to reach their academic potential. My expertise lies in personalizing learning experiences to meet individual student needs, ensuring their success in competitive examinations and academic pursuits.</p>
+                <p>With a focus on both academic knowledge and critical thinking skills, I have helped students achieve remarkable scores and gain confidence in their abilities.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Successful Students</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1350</h3>
+                    <p>Top Score Achieved</p>
+                </div>
+            </div>
         </section>
 
-        <section id="achievements">
+        <section id="achievements" class="achievements-section">
             <h2>Achievements</h2>
             <p>Here are some highlights of my students' accomplishments:</p>
-            <ul>
-                <li><strong>Student A:</strong> Achieved a score of 1150 on standardized exams.</li>
-                <li><strong>Student B:</strong> Secured a score of 1200 with consistent improvement.</li>
-                <li><strong>Student C:</strong> Reached 1250, surpassing their target score.</li>
-                <li><strong>Student D:</strong> Excelled with a score of 1300, demonstrating exceptional progress.</li>
-                <li><strong>Student E:</strong> Achieved a top-tier score of 1350 through hard work and dedication.</li>
-            </ul>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <h3>Ahmed Hassan</h3>
+                    <p>Scored 1150 on standardized exams</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Fatima Ali</h3>
+                    <p>Secured 1200 with consistent improvement</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Omar Youssef</h3>
+                    <p>Reached 1250, surpassing his target score</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Leila Samir</h3>
+                    <p>Excelled with a score of 1300</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Hassan Mustafa</h3>
+                    <p>Achieved a top-tier score of 1350</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <h3>My Journey</h3>
+                <ul>
+                    <li><strong>2010:</strong> Began my teaching career</li>
+                    <li><strong>2015:</strong> Mentored first student to achieve a 1300+ score</li>
+                    <li><strong>2020:</strong> Expanded my expertise with online tutoring</li>
+                    <li><strong>2024:</strong> Reached a milestone of 50+ successful students</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="testimonials">
+        <section id="testimonials" class="testimonials-section">
             <h2>Testimonials</h2>
-            <blockquote>
-                <p>"Eng. Kareem’s teaching methods transformed my understanding of complex topics. I couldn’t have achieved my score without his guidance!"</p>
-                <footer>- Student A</footer>
-            </blockquote>
-            <blockquote>
-                <p>"I was able to surpass my goals thanks to the personalized attention and encouragement from Eng. Kareem."</p>
-                <footer>- Student D</footer>
-            </blockquote>
+            <div class="testimonial-slider">
+                <blockquote>
+                    <p>"Eng. Kareem’s teaching methods transformed my understanding of complex topics. I couldn’t have achieved my score without his guidance!"</p>
+                    <footer>- Ahmed Hassan</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"I was able to surpass my goals thanks to the personalized attention and encouragement from Eng. Kareem."</p>
+                    <footer>- Leila Samir</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"A truly exceptional educator who knows how to bring out the best in his students."</p>
+                    <footer>- Omar Youssef</footer>
+                </blockquote>
+            </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <h2>Contact</h2>
             <p>Get in touch to discuss how I can help you achieve academic excellence:</p>
-            <ul>
-                <li>Email: <a href="mailto:eng.kareem@example.com">eng.kareem@example.com</a></li>
-                <li>Phone: <a href="tel:+1234567890">+1234567890</a></li>
-            </ul>
+            <form action="#" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Eng. Kareem. All Rights Reserved.</p>
-        <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p>&copy; 2024 Eng. Kareem. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
