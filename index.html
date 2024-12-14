@@ -6,6 +6,11 @@
     <meta name="description" content="The professional portfolio of Eng. Kareem, showcasing his achievements and expertise as an educator.">
     <meta name="keywords" content="Eng Kareem, teacher portfolio, education, academic achievements, student success">
     <meta name="author" content="Eng. Kareem">
+    <meta property="og:title" content="Eng. Kareem | Professional Educator">
+    <meta property="og:description" content="Explore the achievements and expertise of Eng. Kareem, a professional educator dedicated to academic excellence.">
+    <meta property="og:image" content="profile.jpg">
+    <meta property="og:url" content="http://www.engkareemportfolio.com">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Eng. Kareem | Professional Educator</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -19,6 +24,13 @@
         .header-content {
             text-align: center;
             color: white;
+            padding: 20px;
+        }
+        .header-content h1 {
+            font-size: 1.8rem;
+        }
+        .header-content p {
+            font-size: 1.2rem;
         }
         .navbar {
             display: flex;
@@ -29,6 +41,10 @@
         .navbar a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #007BFF;
         }
         .achievement-grid {
             display: grid;
@@ -43,17 +59,57 @@
         .testimonial-slider blockquote {
             flex: 0 0 90%;
             scroll-snap-align: start;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 10px;
+            border-radius: 8px;
         }
         .contact-form {
             display: grid;
             grid-template-columns: 1fr;
             gap: 10px;
         }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .social-links a:hover {
+            color: #007BFF;
+        }
+        footer .back-to-top {
+            text-align: center;
+            margin: 20px 0;
+        }
+        footer .back-to-top a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        footer .back-to-top a:hover {
+            text-decoration: underline;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             .header-content p {
                 font-size: 1rem;
@@ -83,9 +139,10 @@
     </style>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="header-content">
-            <h1>Eng. Kareem</h1>
+            <h ```html
+            >Eng. Kareem</h1>
             <p>Your Gateway to Academic Excellence</p>
             <a href="#contact" class="cta-button">Get in Touch</a>
         </div>
@@ -95,7 +152,7 @@
         </video>
     </header>
 
-    <nav>
+    <nav role="navigation">
         <ul class="navbar">
             <li><a href="#about">About Me</a></li>
             <li><a href="#achievements">Achievements</a></li>
@@ -104,7 +161,7 @@
         </ul>
     </nav>
 
-    <main>
+    <main role="main">
         <section id="about" class="about-section">
             <h2>About Me</h2>
             <div class="about-content">
@@ -168,47 +225,51 @@
             <h2>Testimonials</h2>
             <div class="testimonial-slider">
                 <blockquote>
-                    <p>"Eng. Kareem’s teaching methods transformed my understanding of complex topics. I couldn’t have achieved my score without his guidance!"</p>
-                    <footer>- Ahmed Hassan</footer>
+                    "Eng. Kareem is an exceptional educator. His personalized approach to teaching helped me improve my scores dramatically." - Amina S.
                 </blockquote>
                 <blockquote>
-                    <p>"I was able to surpass my goals thanks to the personalized attention and encouragement from Eng. Kareem."</p>
-                    <footer>- Leila Samir</footer>
+                    "I never thought I could achieve my target score, but with Eng. Kareem's guidance, I did! Thank you for believing in me." - Youssef M.
                 </blockquote>
                 <blockquote>
-                    <p>"A truly exceptional educator who knows how to bring out the best in his students."</p>
-                    <footer>- Omar Youssef</footer>
+                    "Eng. Kareem's teaching style is engaging and effective. I learned so much and gained confidence in my abilities." - Mariam T.
                 </blockquote>
             </div>
         </section>
 
         <section id="contact" class="contact-section">
-            <h2>Contact</h2>
-            <p>Get in touch to discuss how I can help you achieve academic excellence:</p>
-            <form action="#" method="post" class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send</button>
+            <h2>Contact Me</h2>
+            <p>If you'd like to discuss how I can help you achieve your academic goals, feel free to get in touch:</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-            <p>&copy; 2024 Eng. Kareem. All Rights Reserved.</p>
+    <footer role="contentinfo">
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
         </div>
+        <div class="back-to-top">
+            <a href="#top">Back to Top</a>
+        </div>
+        <p>&copy; 2023 Eng. Kareem. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-</html>
