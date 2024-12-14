@@ -53,6 +53,9 @@
         nav {
             background: #333;
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             display: flex;
@@ -115,6 +118,10 @@
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .achievement-card:hover {
+            transform: translateY(-5px);
         }
         .testimonial-slider {
             display: flex;
@@ -123,12 +130,13 @@
             gap: 10px;
         }
         .testimonial-slider blockquote {
-            flex: 0 0 90%;
+            flex: 0 ```html
+            0 90%;
             scroll-snap-align: start;
             border: 1px solid #ddd;
             padding: 20px;
             background-color: #f9f9f9;
- margin: 10px;
+            margin: 10px;
             border-radius: 8px;
             font-style: italic;
         }
@@ -216,7 +224,7 @@
         <section id="about" class="about-section">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="profile.jpg" alt="Eng. Kareem" class="profile-image">
+                <img src="profile.jpg" alt="Profile photo of Eng. Kareem">
                 <p>I am Eng. Kareem, a passionate and dedicated educator with years of experience in guiding students to reach their academic potential. My expertise lies in personalizing learning experiences to meet individual student needs, ensuring their success in competitive examinations and academic pursuits.</p>
             </div>
             <div class="stats">
@@ -256,13 +264,13 @@
                     <p>Excelled with a score of 1300</p>
                 </div>
                 <div class="achievement-card">
-                    <h3>Hassan Mustafa</h3>
+                    < h3>Hassan Mustafa</h3>
                     <p>Achieved a top-tier score of 1350</p>
                 </div>
             </div>
         </section>
 
-        <section id=" testimonials" class="testimonials-section">
+        <section id="testimonials" class="testimonials-section">
             <h2>Testimonials</h2>
             <div class="testimonial-slider">
                 <blockquote>
@@ -291,9 +299,9 @@
 
     <footer role="contentinfo">
         <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Facebook</a>
         </div>
         <div class="back-to-top">
             <a href="#top">Back to Top</a>
@@ -306,10 +314,31 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Highlight active section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
