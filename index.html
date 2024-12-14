@@ -9,6 +9,78 @@
     <title>Eng. Kareem | Professional Educator</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header-content {
+            text-align: center;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .testimonial-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+        .testimonial-slider blockquote {
+            flex: 0 0 90%;
+            scroll-snap-align: start;
+        }
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            .header-content p {
+                font-size: 1rem;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 10px;
+            }
+            .navbar a {
+                font-size: 0.9rem;
+            }
+            .testimonial-slider blockquote {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
